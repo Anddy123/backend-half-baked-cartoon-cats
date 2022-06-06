@@ -12,6 +12,7 @@ describe('cats routes', () => {
 
   it('/cats should return a list of cats', async () => {
     const res = await request(app).get('/cats');
+    console.log(res.body);
     const expected = cats.map((cat) => {
       return { id: cat.id, name: cat.name };
     });
